@@ -18,7 +18,7 @@ environments:
           method: bluegreen
           active: green
           custom_urls:
-          blue:
-          - iie-web-us1-dev-blue.bite.pearsondev.tech
-          green:
-          - iie-web-us1-dev-green.bite.pearsondev.tech
+            blue:
+            - iie-web-us1-dev-blue.bite.pearsondev.tech
+            green:
+            - iie-web-us1-dev-green.bite.pearsondev.tech
