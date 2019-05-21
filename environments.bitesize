@@ -4,7 +4,7 @@ environments:
     namespace: nginx-tst-dev
     services:
       - name: nginx-tst-app
-        application: nginx-green
+        application: nginx-blue
         version: 2.0.0
         external_url: idc-web-ar.dev-prsn.com
         port: 80
@@ -13,7 +13,7 @@ environments:
         ssl: "true"
         deployment:
           method: bluegreen
-          active: blue
+          active: green
           custom_urls:
             blue:
             - iie-web-us1-dev-blue.bite.pearsondev.tech
