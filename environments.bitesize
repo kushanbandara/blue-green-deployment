@@ -4,7 +4,7 @@ environments:
     namespace: nginx-tst-dev
     services:
       - name: nginx-tst-app
-        application: nginx-blue
+        application: nginx-green
         version: 2.0.0
         external_url:
         - iie-web-us1-dev.bite.pearsondev.tech
@@ -15,7 +15,7 @@ environments:
         ssl: "true"
         deployment:
           method: bluegreen
-          active: green
+          active: blue
           custom_urls:
             blue:
             - iie-web-us1-dev-blue.bite.pearsondev.tech
