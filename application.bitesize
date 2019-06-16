@@ -1,7 +1,7 @@
 project: spring-tst
 applications:
   - name: spring-app
-    runtime: ubuntu-jdk8:1.0
+    runtime: ubuntu
     version: "0.1.0"
     dependencies:
       - name: spring-app

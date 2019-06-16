@@ -3,7 +3,7 @@ environments:
   - name: dev
     namespace: spring-tst-dev
     services:
-      - name: nginx-tst-app
+      - name: spring-tst-app
 #        application: nginx-blue
 #        version: 2.0.0
         external_url: app-spring-tst-us1-dev.bite.pearsondev.tech
