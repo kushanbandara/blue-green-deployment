@@ -1,7 +1,7 @@
 project: spring-tst
 applications:
   - name: spring-app
-    runtime: ubuntu
+    runtime: ubuntu:xenial-20190222
     version: "0.1.0"
     dependencies:
       - name: spring-app
