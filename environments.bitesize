@@ -1,4 +1,4 @@
-project: nginx-tst
+project: spring-tst
 environments:
   - name: dev
     namespace: nginx-tst-dev
@@ -6,16 +6,16 @@ environments:
       - name: nginx-tst-app
         application: nginx-blue
         version: 2.0.0
-        external_url: idc-web-ar.dev-prsn.com
+        external_url: app-spring-tst-us1-dev.bite.pearsondev.tech
         port: 80
         replicas: 2
         backend_port: 80
-        ssl: "true"
+        ssl: "false"
         deployment:
           method: bluegreen
-          active: green
+          active: blue # (traffic goes to blue)
           custom_urls:
             blue:
-            - iie-web-us1-dev-blue.bite.pearsondev.tech
+            - app-spring-tst-us1-dev-blue.bite.pearsondev.tech
             green:
-            - iie-web-us1-dev-green.bite.pearsondev.tech
+            - app-spring-tst-us1-dev-green.bite.pearsondev.tech

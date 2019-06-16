@@ -1,4 +1,4 @@
-project: spring
+project: spring-tst
 components:
   - name: spring-app
     os: linux
