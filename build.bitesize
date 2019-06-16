@@ -2,6 +2,17 @@ project: spring-tst
 components:
   - name: spring-app
     os: linux
+    dependencies:
+    - type: gem-package
+      package: fpm
+    - type: debian-package
+      package: rlwrap
+    - type: debian-package
+      package: build-essential
+    - type: debian-package
+      package: openjdk-8-jre
+      version: 8u77
+      location: https://ubuntu.pkgs.org/16.04/ubuntu-main-amd64/openjdk-8-jre_8u77-b03-3ubuntu3_amd64.deb
     repository:
       git: git@github.com:sivayathu11/spring-boot.git
       branch: master
