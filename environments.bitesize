@@ -8,9 +8,7 @@ environments:
       active: blue
     services:
       - name: spring-app
-        application: nginx-blue
-        external_url: app-spring-tst-us1-dev.bite.pearsondev.tech
-        port: 80
-        replicas: 2
-        backend_port: 80
+        external_url: sivatest.prsn.io
+        port: 8080
         ssl: "false"
+        replicas: 2
