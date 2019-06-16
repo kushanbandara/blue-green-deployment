@@ -1,7 +1,11 @@
-project: spring-tst
+project: spring
 environments:
   - name: dev
     namespace: spring-tst-dev
+    deployment:
+      method: bluegreen
+      mode: auto
+      active: blue
     services:
       - name: spring-app
         application: nginx-blue
@@ -10,11 +14,3 @@ environments:
         replicas: 2
         backend_port: 80
         ssl: "false"
-        deployment:
-          method: bluegreen
-          active: blue # (traffic goes to blue)
-          custom_urls:
-            blue:
-            - app-spring-tst-us1-dev-blue.bite.pearsondev.tech
-            green:
-            - app-spring-tst-us1-dev-green.bite.pearsondev.tech
