@@ -3,9 +3,8 @@ environments:
   - name: dev
     namespace: spring-tst-dev
     services:
-      - name: spring-tst-app
-#        application: nginx-blue
-#        version: 2.0.0
+      - name: spring-app
+        application: nginx-blue
         external_url: app-spring-tst-us1-dev.bite.pearsondev.tech
         port: 80
         replicas: 2
