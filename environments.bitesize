@@ -1,4 +1,4 @@
-project: spring
+project: spring-tst
 environments:
   - name: dev
     namespace: spring-tst-dev
