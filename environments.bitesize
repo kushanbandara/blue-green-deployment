@@ -1,7 +1,7 @@
 project: spring-tst
 environments:
   - name: dev
-    namespace: nginx-tst-dev
+    namespace: spring-tst-dev
     services:
       - name: nginx-tst-app
         application: nginx-blue
