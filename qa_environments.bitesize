@@ -4,11 +4,10 @@ environments:
     namespace: spring-qa
     services:
       - name: spring-app
-        application: spring-app
+#        application: spring-app
         external_url: app-spring-tst-us1-qa.bite.pearsondev.tech
         port: 80
         replicas: 1
-        backend_port: 80
         ssl: "false"
         deployment:
           method: bluegreen
