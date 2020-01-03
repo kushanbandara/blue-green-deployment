@@ -4,8 +4,8 @@ environments:
     namespace: spring-qa
     services:
       - name: spring-app
-#        application: nginx-green
-#        version: "1.0.0"
+        application: nginx-green
+        version: "1.0.0"
         external_url: app-spring-tst-us1-qa.bite.pearsondev.tech
         port: 80
         replicas: 1
