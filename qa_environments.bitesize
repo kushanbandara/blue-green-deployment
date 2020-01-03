@@ -6,7 +6,7 @@ environments:
       - name: spring-app
         application: nginx-green
         version: "1.0.0"
-        external_url: app-spring-tst-us1-qa.bite.pearsondev.tech
+        external_url: app-spring-tst-us1-qa.prsn-dev.io
         port: 80
         replicas: 1
         ssl: "false"
@@ -15,6 +15,6 @@ environments:
           active: green # (traffic goes to green)
           custom_urls:
             blue:
-            - app-spring-tst-us1-qa-blue.bite.pearsondev.tech
+            - app-spring-tst-us1-qa-blue.prsn-dev.io
             green:
-            - app-spring-tst-us1-qa-green.bite.pearsondev.tech
+            - app-spring-tst-us1-qa-green.prsn-dev.io
