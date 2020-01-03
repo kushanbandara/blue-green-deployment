@@ -1,4 +1,4 @@
-project: sivayathu11
+project: spring
 environments:
   - name: qa
     namespace: spring-qa
