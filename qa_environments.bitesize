@@ -10,6 +10,7 @@ environments:
         port: 80
         replicas: 1
         ssl: "false"
+        deployment_method: "bluegreen"
         deployment:
           method: bluegreen
           active: blue
