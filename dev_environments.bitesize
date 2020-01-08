@@ -1,7 +1,7 @@
-project: spring
+project: kushan
 environments:
   - name: dev
-    namespace: spring-tst-dev
+    namespace: kushan
     services:
       - name: spring-app
         application: spring-app
