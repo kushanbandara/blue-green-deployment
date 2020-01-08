@@ -1,12 +1,12 @@
 project: kushan
 environments:
-  - name: dev
+  - name: qa
     namespace: kushan
     services:
       - name: kushan-service
 #        application: nginx-green
 #        version: "2.0.0"
-        external_url: kushan-svc-us1-dev.prsn-dev.io
+        external_url: kushan-svc-us1-qa.prsn-dev.io
         port: 80
         replicas: 1
         ssl: "false"
@@ -15,6 +15,6 @@ environments:
           active: blue
 #          custom_urls:
 #            blue:
-#            - kushan-svc-us1-dev-blue.prsn-dev.io
+#            - kushan-svc-us1-qa-blue.prsn-dev.io
 #            green:
-#            - kushan-svc-us1-dev-green.prsn-dev.io
+#            - kushan-svc-us1-qa-green.prsn-dev.io
