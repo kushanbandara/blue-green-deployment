@@ -1,21 +1,20 @@
-project: spring
+project: kushan
 environments:
-  - name: qa
-    namespace: spring-qa
+  - name: dev
+    namespace: kushan
     services:
-      - name: spring-app
-        application: nginx-green
-        version: "2.0.0"
-        external_url: app-spring-tst-us1-qa.prsn-dev.io
+      - name: kushan-service
+#        application: nginx-green
+#        version: "2.0.0"
+        external_url: kushan-svc-us1-dev.prsn-dev.io
         port: 80
         replicas: 1
         ssl: "false"
-        deployment_method: "bluegreen"
         deployment:
           method: bluegreen
           active: blue
-          custom_urls:
-            blue:
-            - app-spring-tst-us1-qa-blue.prsn-dev.io
-            green:
-            - app-spring-tst-us1-qa-green.prsn-dev.io
+#          custom_urls:
+#            blue:
+#            - kushan-svc-us1-dev-blue.prsn-dev.io
+#            green:
+#            - kushan-svc-us1-dev-green.prsn-dev.io
