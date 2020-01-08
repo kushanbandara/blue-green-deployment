@@ -12,7 +12,7 @@ environments:
         ssl: "false"
         deployment:
           method: bluegreen
-          active: green
+          active: blue
 #          custom_urls:
 #            blue:
 #            - kushan-svc-us1-qa-blue.prsn-dev.io
