@@ -1,40 +1,9 @@
 project: s3test
-environments:
-  - name: dev
-    namespace: eo-s3-test
-    services:
-      - type: s3
-        name: environment_operator_test
-        options:
-          bucket_region: "eu-west-1"
-          bucket_encryption: "aes-256"  
-      - name: spring-app
-        application: spring-app
-        external_url: app-spring-tst-us1-dev.bite.pearsondev.tech
-        port: 80
-        replicas: 2
-        backend_port: 80
-        ssl: "false"
-        deployment:
-          method: bluegreen
-          active: blue # (traffic goes to blue)
-          custom_urls:
-            blue:
-            - app-spring-tst-us1-dev-blue.bite.pearsondev.tech
-            green:
-            - app-spring-tst-us1-dev-green.bite.pearsondev.tech
-      - name: spring-app2
-        application: spring-app2
-        external_url: app-spring-tst2-us1-dev.bite.pearsondev.tech
-        port: 80
-        replicas: 2
-        backend_port: 80
-        ssl: "false"
-        deployment:
-          method: bluegreen
-          active: blue # (traffic goes to blue)
-          custom_urls:
-            blue:
-            - app-spring-tst2-us1-dev-blue.bite.pearsondev.tech
-            green:
-            - app-spring-tst2-us1-dev-green.bite.pearsondev.tech
+- name: dev
+  namespace: eo-s3-test
+  services:
+  - type: s3
+    name: eo_test_s3_bucket
+    options:
+      bucket_region: "eu-west-1"
+      bucket_encryption: "aes-256"
