@@ -18,3 +18,8 @@ environments:
             - app-spring-tst-us1-dev-blue.bite.pearsondev.tech
             green:
             - app-spring-tst-us1-dev-green.bite.pearsondev.tech
+  - type: s3
+    name: environment_operator_test
+    options:
+      bucket_region: "eu-west-1"
+      bucket_encryption: "aes-256"
