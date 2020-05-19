@@ -1,7 +1,7 @@
 project: s3test
 environments:
   - name: dev
-    namespace: kushs3-test
+    namespace: eo-s3-test
     services:
       - name: spring-app
         application: spring-app
