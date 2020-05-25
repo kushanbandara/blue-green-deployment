@@ -1,7 +1,7 @@
 project: s3test
 environments:
   - name: dev
-    namespace: eo-s3-test
+    namespace: eo-s3-test1
     services:
     - type: s3
       name: eo_test_s3_bucket2
