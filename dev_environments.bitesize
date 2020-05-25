@@ -2,8 +2,8 @@ project: s3test
 environments:
   - name: dev
     namespace: eo-s3-test
-    servicess:
-    - type: s4
+    services:
+    - types: s4
       name: eo_test_s3_bucket2
       options:
         bucket_region: "eu-west-1"
