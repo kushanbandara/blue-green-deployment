@@ -1,8 +1,8 @@
 ---
-project: pearsontechnology
+project: s3-test
 environments:
-  - name: sample-app-environment
-    namespace: sample-app
+  - name: dev
+    namespace: eo-s3-test
     deployment:
       method: rolling-upgrade
     services:
