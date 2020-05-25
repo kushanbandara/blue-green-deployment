@@ -4,9 +4,9 @@ applications:
     runtime: ubuntu:xenial-20190222
     version: "0.1.0"
     dependencies:
-      - name: spring-app
+      - name: kushan-app
         type: debian-package
         origin:
-          build: spring-app
+          build: kushan-app
         version: 1.0
     command: "java -jar /app/assignment-service-1.0.0.jar"
