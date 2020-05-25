@@ -1,10 +1,10 @@
 project: s3test
 environments:
-  - name: dev
-    namespace: eo-s3-test
-    services:
-      - type: s3
-        name: eotestfors31234
-        options:
-          bucket_region: "eu-west-1"
-          bucket_encryption: "aes-256"
+- name: dev
+  namespace: eo-s3-test
+  services:
+  - type: s3
+    name: s3_bucket_name
+    options:
+      bucket_region: "eu-west-1"
+      bucket_encryption: "aes-256"
