@@ -4,8 +4,8 @@ environments:
     namespace: eo-s3-test
     services:
       - name: kushan-service
-#        application: nginx-green
-#        version: "2.0.0"
+        application: nginx-green
+        version: "2.0.0"
         external_url: kushan-svc-us1-qa.prsn-dev.io
         port: 80
         replicas: 1
