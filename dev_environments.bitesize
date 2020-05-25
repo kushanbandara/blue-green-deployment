@@ -1,11 +1,11 @@
 project: s3test
 environments:
   - name: dev
-    namespace: eo-s3-test
+    namespace: s3-test-int
     services:
       - name: spring-app
         application: spring-app
-        external_url: app-spring-tst-us1-dev.bite.pearsondev.tech
+        external_url: app-spring-s3-test.paas1.eu-west-1.int.prsn.io
         port: 80
         replicas: 2
         backend_port: 80
@@ -15,9 +15,9 @@ environments:
           active: blue # (traffic goes to blue)
           custom_urls:
             blue:
-            - app-spring-tst-us1-dev-blue.bite.pearsondev.tech
+            - app-spring-s3-test-blue.paas1.eu-west-1.int.prsn.io
             green:
-            - app-spring-tst-us1-dev-green.bite.pearsondev.tech
+            - app-spring-s3-test-green.paas1.eu-west-1.int.prsn.io
       - type: s3
         name: eo-test-s3-bucket0001
         options:
