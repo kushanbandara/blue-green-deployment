@@ -2,19 +2,12 @@ project: s3test
 environments:
   - name: dev
     namespace: eo-s3-test
+    replicas: 1
+    deployment:
+      method: rolling-upgrade
     services:
-      - name: kushan-service
-        application: nginx-green
-        version: "2.0.0"
-        external_url: kushan-svc-us1-qa.prsn-dev.io
-        port: 80
-        replicas: 1
-        ssl: "false"
-        deployment:
-          method: bluegreen
-          active: blue
-#          custom_urls:
-#            blue:
-#            - kushan-svc-us1-qa-blue.prsn-dev.io
-#            green:
-#            - kushan-svc-us1-qa-green.prsn-dev.io
+      - type: s3
+        name: eotestfors31234
+        options:
+          bucket_region: "eu-west-1"
+          bucket_encryption: "aes-256"
