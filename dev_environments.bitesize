@@ -1,60 +1,14 @@
----
-project: s3-test
+project: s3test
 environments:
   - name: dev
     namespace: eo-s3-test
     deployment:
-      method: rolling-upgrade
+      method: bluegreen
+      mode: auto
+      active: blue
     services:
-      - name: front
-        external_url: front.sample-app.domain
-        ssl: false
-        port: 80
-        env:
-          - name: APP_PORT
-            value: 80
-          - name: BACK_END
-            value: back.sample-app.svc.cluster.local
-        limits:
-          cpu: 500m
-          memory: 100Mi
-      - name: back
-        port: 80
-        replicas: 1
-        hpa:
-          min_replicas: 1
-          max_replicas: 5
-          metric:
-            name: cpu
-            target_average_utilization: 75
-        env:
-          - name: APP_PORT
-            value: 80
-        requests:
-          cpu: 100m
-        limits:
-          cpu: 500m
-          memory: 100Mi
-      - name: api
-        port: 9898
-        replicas: 1
-        hpa:
-          min_replicas: 1
-          max_replicas: 10
-          metric:
-            name: http_requests
-            target_average_value: 1000m
-        env:
-          - name: APP_PORT
-            value: 9898
-        annotations:
-          - name: prometheus.io/scrape
-            value: true
-          - name: prometheus.io/path
-            value: /metrics
-          - name: prometheus.io/port
-            value: 9898
-        requests:
-          cpu: 100m
-        limits:
-          cpu: 500m
+      - name: spring-app
+        external_url: s3-kush.prsn.io
+        port: 8080
+        ssl: "false"
+        replicas: 2
