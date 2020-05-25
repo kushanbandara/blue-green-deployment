@@ -1,6 +1,6 @@
-project: spring-tst
+project: s3test
 components:
-  - name: spring-app
+  - name: kushan-app
     os: linux
     dependencies:
     - type: gem-package
