@@ -2,9 +2,6 @@ project: s3test
 environments:
   - name: dev
     namespace: eo-s3-test
-    replicas: 1
-    deployment:
-      method: rolling-upgrade
     services:
       - type: s3
         name: eotestfors31234
