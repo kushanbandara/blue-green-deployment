@@ -7,4 +7,4 @@ environments:
       name: eo_test_s3_bucket2
       options:
         bucket_region: "eu-west-1"
-        bucket_encryption: "aes-256"
+        bucket_encryption: "AES-256"
