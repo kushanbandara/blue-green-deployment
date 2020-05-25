@@ -1,21 +1,7 @@
-environment:
+project: s3test
+environments:
 - name: dev
-  apiVersion: prsn.io/v1
-  kind: Dynamodb
-  metadata:
-    name: s3test
-    namespace: eo-s3-test
-    labels:
-      type: dynamodb
-  spec:
-    region: "eu-west-1"
-    tablename: "TableName2"
-    pri_key_attributename: "name"
-    pri_key_attributetype: "S"
-    pitr: "true"
-    writecapacityunits: 30
-    readcapacityunits: 20
-    optional_spec:
-      sort_key_attributename: "age"
-      sort_key_attributetype: "N"
-      sort_key_keytype: "RANGE"
+  namespace: eo-s3-test
+  services:
+  - type: sqs
+    name: eotestkush
