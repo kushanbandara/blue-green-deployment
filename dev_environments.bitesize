@@ -7,7 +7,7 @@ environments:
       mode: auto
       active: blue
     services:
-      - name: spring-app
+      - name: kushan-app
         external_url: s3-kush.prsn.io
         port: 8080
         ssl: "false"
