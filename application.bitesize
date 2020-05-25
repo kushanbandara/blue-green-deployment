@@ -1,6 +1,6 @@
-project: spring-tst
+project: s3test
 applications:
-  - name: spring-app
+  - name: kushan-app
     runtime: ubuntu:xenial-20190222
     version: "0.1.0"
     dependencies:
