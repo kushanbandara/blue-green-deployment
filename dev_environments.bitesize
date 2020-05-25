@@ -1,4 +1,3 @@
-```yaml
 apiVersion: prsn.io/v1
 kind: Dynamodb
 metadata:
@@ -18,4 +17,3 @@ spec:
     sort_key_attributename: "age"
     sort_key_attributetype: "N"
     sort_key_keytype: "RANGE"
-```
