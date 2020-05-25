@@ -1,12 +1,12 @@
 project: s3test
 applications:
-  - name: kushan-app
+  - name: spring-app
     runtime: ubuntu:xenial-20190222
     version: "0.1.0"
     dependencies:
-      - name: kushan-app
+      - name: spring-app
         type: debian-package
         origin:
-          build: kushan-app
+          build: spring-app
         version: 1.0
     command: "java -jar /app/assignment-service-1.0.0.jar"
