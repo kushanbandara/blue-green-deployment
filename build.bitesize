@@ -1,6 +1,6 @@
 project: s3test
 components:
-  - name: kushan-app
+  - name: spring-app
     os: linux
     dependencies:
     - type: gem-package
