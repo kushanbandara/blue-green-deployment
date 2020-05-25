@@ -4,7 +4,7 @@ environments:
     namespace: eo-s3-test
     services:
     - type: s3
-      name: eo_test_s3_bucket
+      name: eo_test_s3_bucket2
       options:
         bucket_region: "eu-west-1"
         bucket_encryption: "aes-256"
