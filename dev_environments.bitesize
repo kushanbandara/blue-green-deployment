@@ -2,7 +2,7 @@ project: s3test
 environments:
   - name: dev
     namespace: eo-s3-test
-    services:
+    servicess:
     - type: s4
       name: eo_test_s3_bucket2
       options:
