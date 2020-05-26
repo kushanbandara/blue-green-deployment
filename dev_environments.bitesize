@@ -2,24 +2,17 @@ project: s3test
 environments:
   - name: dev
     namespace: s3-test-int
+    deployment:
+      method: rolling-upgrade
     services:
-      - name: spring-app
-        application: spring-app
-        external_url: app-spring-s3-test.paas1.eu-west-1.int.prsn.io
-        port: 80
-        replicas: 2
-        backend_port: 80
-        ssl: "false"
-        deployment:
-          method: bluegreen
-          active: blue # (traffic goes to blue)
-          custom_urls:
-            blue:
-            - app-spring-s3-test-blue.paas1.eu-west-1.int.prsn.io
-            green:
-            - app-spring-s3-test-green.paas1.eu-west-1.int.prsn.io
-      - type: s3
-        name: eo-test-s3-bucket0001
+      - name: eosnstestkush
+        type: sns
+        version: 1.0.0
+        replicas: 1
         options:
-          bucket_region: "eu-west-1"
-          bucket_encryption: "aes-256"
+           endpoint: 'kushanbandara.vijithbandara@pearson.com'
+           protocol: 'email'
+      - name: eosnstestkush
+        type: sqs
+        version: 1.0.0
+        replicas: 1
