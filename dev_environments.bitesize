@@ -16,3 +16,8 @@ environments:
         type: sqs
         version: 1.0.0
         replicas: 1
+      - name: eosnstestkush
+        type: s3
+        options:
+          bucket_region: "eu-west-1"
+          bucket_encryption: "aes-256"
