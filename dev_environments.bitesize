@@ -1,23 +1,21 @@
-project: s3test
+project: kushan
 environments:
   - name: dev
-    namespace: s3-test-int
-    deployment:
-      method: rolling-upgrade
+    namespace: kush-dev
     services:
-      - name: eosnstestkush
-        type: sns
-        version: 1.0.0
+      - name: test-app
+        ssl: "true"
+#        application: nginx-green
+#        version: "2.0.0"
+        external_url: kushantest-us1-dev.prsn-dev.io
+        port: 80
         replicas: 1
-        options:
-           endpoint: 'kushanbandara.vijithbandara@pearson.com'
-           protocol: 'email'
-      - name: eosnstestkush
-        type: sqs
-        version: 1.0.0
-        replicas: 1
-      - name: eosnstestkush
-        type: s3
-        options:
-          bucket_region: "eu-west-1"
-          bucket_encryption: "aes-256"
+        ssl: "false"
+        deployment:
+          method: bluegreen
+          active: blue
+#          custom_urls:
+#            blue:
+#            - kushan-svc-us1-qa-blue.prsn-dev.io
+#            green:
+#            - kushan-svc-us1-qa-green.prsn-dev.io
