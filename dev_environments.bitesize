@@ -3,9 +3,7 @@ environments:
   - name: dev
     namespace: kush5-dev
     deployment:
-      method: bluegreen
-      mode: auto
-      active: blue
+      method: rolling-upgrade
     services:
       - name: spring-app
         external_url: kushanapp.dev.prsn.io
