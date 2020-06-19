@@ -1,7 +1,7 @@
 project: kushan
 environments:
   - name: dev
-    namespace: kush-dev
+    namespace: kush5-dev
     deployment:
       method: bluegreen
       mode: auto
