@@ -1,12 +1,12 @@
 project: kushan
 environments:
   - name: dev
-    namespace: kush5-dev
+    namespace: kush6-dev
     deployment:
       method: rolling-upgrade
     services:
       - name: spring-app
         external_url: kushanapp.dev.prsn.io
         port: 8080
-        ssl: "true"
+        ssl: "false"
         replicas: 2
