@@ -1,7 +1,7 @@
 project: kushan
 environments:
   - name: dev
-    namespace: kush6-dev
+    namespace: kush7-dev
     deployment:
       method: rolling-upgrade
     services:
